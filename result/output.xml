@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on darwin)" generated="2026-01-16T17:52:25.859529" rpa="false" schemaversion="5">
+<suite id="s1" name="testSuitability" source="/Users/fabio.quermes/Automacao/Automacao_Porto_Investimento/tests/testSuitability.robot">
+<test id="s1-t1" name="Cenario Acessar Deeplink Perfil Conservador" line="16">
+<kw name="Abrir Aplicativo" owner="mein">
+<kw name="Open Application" owner="AppiumLibrary">
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=RXCY3074CAL</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>appPackage=${app_package}</arg>
+<arg>appActivity=${app_activity}</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>allow-insecure= adb_shell</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="PASS" start="2026-01-16T17:52:26.865317" elapsed="6.860565"/>
+</kw>
+<status status="PASS" start="2026-01-16T17:52:26.863905" elapsed="6.862855"/>
+</kw>
+<kw name="Abrir Deeplink Perfil 'CONSERVATIVE'" owner="mein" source_name="Abrir Deeplink Perfil '${profile}'">
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-01-16T17:52:33.730727" level="INFO">${deeplink_url} = portosuperapp://porto/invest/suitability?profile=CONSERVATIVE</msg>
+<var>${deeplink_url}</var>
+<arg>portosuperapp://porto/invest/suitability?profile=${profile}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-01-16T17:52:33.729577" elapsed="0.001232"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2026-01-16T17:52:33.731700" level="INFO">${adb_command} = am start -W -a android.intent.action.VIEW -d "portosuperapp://porto/invest/suitability?profile=CONSERVATIVE" br.com.portoseguro.experienciacliente.mundoporto.hml</msg>
+<var>${adb_command}</var>
+<arg>am start -W -a android.intent.action.VIEW -d "${deeplink_url}" ${app_package}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2026-01-16T17:52:33.731062" elapsed="0.000694"/>
+</kw>
+<kw name="Execute Script" owner="AppiumLibrary">
+<msg time="2026-01-16T17:52:33.733642" level="INFO">Provided dictionary: {'command': 'am start -W -a android.intent.action.VIEW -d "portosuperapp://porto/invest/suitability?profile=CONSERVATIVE" br.com.portoseguro.experienciacliente.mundoporto.hml'}</msg>
+<arg>mobile: shell</arg>
+<arg>command=${adb_command}</arg>
+<doc>Executes a variety of native, mobile commands that aren't associated
+with a specific endpoint. Check out the appium drivers for more details: https://appium.io/docs/en/2.19/ecosystem/drivers/.</doc>
+<status status="PASS" start="2026-01-16T17:52:33.731988" elapsed="0.490558"/>
+</kw>
+<status status="PASS" start="2026-01-16T17:52:33.728681" elapsed="0.494294"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-01-16T17:52:36.523822" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
+<arg>${txt_box}</arg>
+<arg>5</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-16T17:52:34.223558" elapsed="2.300547"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-16T17:52:36.528453" level="INFO">Clicking element 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text'.</msg>
+<msg time="2026-01-16T17:52:36.705020" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
+<arg>${txt_box}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-16T17:52:36.524704" elapsed="0.180523"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2026-01-16T17:52:36.709136" level="INFO">Typing text '91510934642' into text field 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text'</msg>
+<msg time="2026-01-16T17:52:38.511827" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
+<arg>${txt_box}</arg>
+<arg>91510934642</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-16T17:52:36.706015" elapsed="1.806043"/>
+</kw>
+<kw name="Click Text" owner="AppiumLibrary">
+<msg time="2026-01-16T17:52:39.569053" level="INFO">xpath criteria: //*[contains(@text,"Continuar")]</msg>
+<arg>Continuar</arg>
+<doc>Clicks the text identified by ``text``.</doc>
+<status status="PASS" start="2026-01-16T17:52:38.514228" elapsed="1.054929"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-16T17:52:41.569929" level="INFO">Slept 2 seconds.</msg>
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-16T17:52:39.569395" elapsed="2.000663"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2026-01-16T17:52:41.929706" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
+<arg>${txt_box}</arg>
+<arg>5</arg>
+<doc>Waits until the element specified by the ``locator`` is visible.</doc>
+<status status="PASS" start="2026-01-16T17:52:41.570282" elapsed="0.359540"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-16T17:52:41.931545" level="INFO">Clicking element 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text'.</msg>
+<msg time="2026-01-16T17:52:42.136085" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
+<arg>${txt_box}</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-16T17:52:41.930098" elapsed="0.206086"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2026-01-16T17:52:42.138264" level="INFO">Typing text 'senha123' into text field 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text'</msg>
+<msg time="2026-01-16T17:52:42.941301" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
+<arg>${txt_box}</arg>
+<arg>senha123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-16T17:52:42.136998" elapsed="0.804393"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2026-01-16T17:52:42.942701" level="INFO">Clicking element 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/label'.</msg>
+<msg time="2026-01-16T17:52:43.724299" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/label</msg>
+<arg>br.com.portoseguro.experienciacliente.mundoporto.hml:id/label</arg>
+<doc>Clicks the element identified by ``locator``.</doc>
+<status status="PASS" start="2026-01-16T17:52:42.941746" elapsed="0.782761"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>text=Continuar sem biometria</arg>
+<arg>timeout=10</arg>
+<doc>Waits until the ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-01-16T17:52:43.724930" elapsed="8.009489"/>
+</kw>
+<kw name="Click Text" owner="AppiumLibrary">
+<msg time="2026-01-16T17:52:51.902875" level="INFO">xpath criteria: //*[contains(@text,"Continuar sem biometria")]</msg>
+<arg>Continuar sem biometria</arg>
+<doc>Clicks the text identified by ``text``.</doc>
+<status status="PASS" start="2026-01-16T17:52:51.734842" elapsed="0.168186"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-01-16T17:52:56.905320" level="INFO">Slept 5 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2026-01-16T17:52:51.903388" elapsed="5.002211"/>
+</kw>
+<status status="PASS" start="2026-01-16T17:52:26.861715" elapsed="30.046033"/>
+</test>
+<status status="PASS" start="2026-01-16T17:52:25.864569" elapsed="31.045257"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="testSuitability" id="s1" pass="1" fail="0" skip="0">testSuitability</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
