@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.13.3 on darwin)" generated="2026-01-16T18:38:08.373912" rpa="false" schemaversion="5">
+<robot generator="Robot 7.4.1 (Python 3.13.3 on darwin)" generated="2026-01-16T19:05:45.372683" rpa="false" schemaversion="5">
 <suite id="s1" name="testSuitability" source="/Users/frederico_cunha/Projetos/PilotoAutomacao/tests/testSuitability.robot">
-<test id="s1-t1" name="Cenario Acessar Deeplink Perfil Conservador" line="16">
-<kw name="Abrir Aplicativo" owner="mein">
+<test id="s1-t1" name="Cenario Acessar Deeplink Perfil Conservador" line="12">
+<kw name="Abrir Aplicativo" owner="main">
 <kw name="Open Application" owner="AppiumLibrary">
 <arg>http://localhost:4723</arg>
 <arg>platformName=Android</arg>
@@ -18,170 +18,119 @@ Please check https://appium.io/docs/en/2.19/guides/caps/
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | No     | alias             |</doc>
-<status status="PASS" start="2026-01-16T18:38:08.515743" elapsed="7.721378"/>
+<status status="PASS" start="2026-01-16T19:05:45.516760" elapsed="7.626610"/>
 </kw>
-<status status="PASS" start="2026-01-16T18:38:08.515483" elapsed="7.721877"/>
+<status status="PASS" start="2026-01-16T19:05:45.516501" elapsed="7.627226"/>
 </kw>
-<kw name="Abrir Deeplink Perfil 'CONSERVATIVE'" owner="mein" source_name="Abrir Deeplink Perfil '${profile}'">
+<kw name="Abrir Deeplink Perfil 'CONSERVATIVE'" owner="main" source_name="Abrir Deeplink Perfil '${profile}'">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-01-16T18:38:16.239070" level="INFO">${deeplink_url} = portosuperapp://porto/invest/suitability?profile=CONSERVATIVE</msg>
+<msg time="2026-01-16T19:05:53.145601" level="INFO">${deeplink_url} = portosuperapp://porto/invest/suitability?profile=CONSERVATIVE</msg>
 <var>${deeplink_url}</var>
 <arg>portosuperapp://porto/invest/suitability?profile=${profile}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-01-16T18:38:16.238510" elapsed="0.000612"/>
+<status status="PASS" start="2026-01-16T19:05:53.145020" elapsed="0.000625"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-01-16T18:38:16.240475" level="INFO">${adb_command} = am start -W -a android.intent.action.VIEW -d "portosuperapp://porto/invest/suitability?profile=CONSERVATIVE" br.com.portoseguro.experienciacliente.mundoporto.hml</msg>
+<msg time="2026-01-16T19:05:53.146077" level="INFO">${adb_command} = am start -W -a android.intent.action.VIEW -d "portosuperapp://porto/invest/suitability?profile=CONSERVATIVE" br.com.portoseguro.experienciacliente.mundoporto.hml</msg>
 <var>${adb_command}</var>
 <arg>am start -W -a android.intent.action.VIEW -d "${deeplink_url}" ${app_package}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-01-16T18:38:16.239269" elapsed="0.001245"/>
+<status status="PASS" start="2026-01-16T19:05:53.145785" elapsed="0.000319"/>
 </kw>
 <kw name="Execute Script" owner="AppiumLibrary">
-<msg time="2026-01-16T18:38:16.241886" level="INFO">Provided dictionary: {'command': 'am start -W -a android.intent.action.VIEW -d "portosuperapp://porto/invest/suitability?profile=CONSERVATIVE" br.com.portoseguro.experienciacliente.mundoporto.hml'}</msg>
+<msg time="2026-01-16T19:05:53.147312" level="INFO">Provided dictionary: {'command': 'am start -W -a android.intent.action.VIEW -d "portosuperapp://porto/invest/suitability?profile=CONSERVATIVE" br.com.portoseguro.experienciacliente.mundoporto.hml'}</msg>
 <arg>mobile: shell</arg>
 <arg>command=${adb_command}</arg>
 <doc>Executes a variety of native, mobile commands that aren't associated
 with a specific endpoint. Check out the appium drivers for more details: https://appium.io/docs/en/2.19/ecosystem/drivers/.</doc>
-<status status="PASS" start="2026-01-16T18:38:16.240644" elapsed="0.565031"/>
+<status status="PASS" start="2026-01-16T19:05:53.146206" elapsed="0.487749"/>
 </kw>
-<status status="PASS" start="2026-01-16T18:38:16.237771" elapsed="0.568093"/>
+<status status="PASS" start="2026-01-16T19:05:53.144425" elapsed="0.489841"/>
 </kw>
+<kw name="Realizo Login com o usuário '91510934642' e a senha 'senha123'" owner="login" source_name="Realizo Login com o usuário '${username}' e a senha '${password}'">
+<kw name="Preencho o campo da tela de login com '${username}'" owner="login" source_name="Preencho o campo da tela de login com '${texto}'">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-01-16T18:38:19.458122" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
+<msg time="2026-01-16T19:05:56.272006" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
 <arg>${txt_box}</arg>
 <arg>5</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-16T18:38:16.806180" elapsed="2.652072"/>
+<status status="PASS" start="2026-01-16T19:05:53.636041" elapsed="2.636101"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-01-16T18:38:19.459578" level="INFO">Clicking element 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text'.</msg>
-<msg time="2026-01-16T18:38:19.536426" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
+<msg time="2026-01-16T19:05:56.273504" level="INFO">Clicking element 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text'.</msg>
+<msg time="2026-01-16T19:05:56.359452" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
 <arg>${txt_box}</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-16T18:38:19.458532" elapsed="0.077952"/>
+<status status="PASS" start="2026-01-16T19:05:56.272374" elapsed="0.087192"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2026-01-16T18:38:19.537330" level="INFO">Typing text '91510934642' into text field 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text'</msg>
-<msg time="2026-01-16T18:38:21.254554" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
+<msg time="2026-01-16T19:05:56.360856" level="INFO">Typing text '91510934642' into text field 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text'</msg>
+<msg time="2026-01-16T19:05:58.051229" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
 <arg>${txt_box}</arg>
-<arg>91510934642</arg>
+<arg>${texto}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-16T18:38:19.536604" elapsed="1.718342"/>
+<status status="PASS" start="2026-01-16T19:05:56.359799" elapsed="1.691622"/>
+</kw>
+<status status="PASS" start="2026-01-16T19:05:53.635659" elapsed="4.415948"/>
 </kw>
 <kw name="Click Text" owner="AppiumLibrary">
-<msg time="2026-01-16T18:38:23.926978" level="INFO">xpath criteria: //*[contains(@text,"Continuar")]</msg>
+<msg time="2026-01-16T19:05:58.973521" level="INFO">xpath criteria: //*[contains(@text,"Continuar")]</msg>
 <arg>Continuar</arg>
 <doc>Clicks the text identified by ``text``.</doc>
-<status status="PASS" start="2026-01-16T18:38:21.255639" elapsed="2.671564"/>
+<status status="PASS" start="2026-01-16T19:05:58.051901" elapsed="0.921879"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-01-16T18:38:25.930318" level="INFO">Slept 2 seconds.</msg>
+<msg time="2026-01-16T19:06:00.975721" level="INFO">Slept 2 seconds.</msg>
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-01-16T18:38:23.927723" elapsed="2.002881"/>
+<status status="PASS" start="2026-01-16T19:05:58.974218" elapsed="2.001860"/>
 </kw>
+<kw name="Preencho o campo da tela de login com '${password}'" owner="login" source_name="Preencho o campo da tela de login com '${texto}'">
 <kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-01-16T18:38:26.055793" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
+<msg time="2026-01-16T19:06:01.054840" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
 <arg>${txt_box}</arg>
 <arg>5</arg>
 <doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-16T18:38:25.931185" elapsed="0.124668"/>
+<status status="PASS" start="2026-01-16T19:06:00.978149" elapsed="0.076806"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-01-16T18:38:26.056501" level="INFO">Clicking element 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text'.</msg>
-<msg time="2026-01-16T18:38:26.178202" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
+<msg time="2026-01-16T19:06:01.056173" level="INFO">Clicking element 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text'.</msg>
+<msg time="2026-01-16T19:06:01.167158" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
 <arg>${txt_box}</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-16T18:38:26.055981" elapsed="0.122298"/>
+<status status="PASS" start="2026-01-16T19:06:01.055167" elapsed="0.112226"/>
 </kw>
 <kw name="Input Text" owner="AppiumLibrary">
-<msg time="2026-01-16T18:38:26.179167" level="INFO">Typing text 'senha123' into text field 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text'</msg>
-<msg time="2026-01-16T18:38:27.221622" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
+<msg time="2026-01-16T19:06:01.169694" level="INFO">Typing text 'senha123' into text field 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text'</msg>
+<msg time="2026-01-16T19:06:02.282734" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
 <arg>${txt_box}</arg>
-<arg>senha123</arg>
+<arg>${texto}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-16T18:38:26.178493" elapsed="1.043237"/>
+<status status="PASS" start="2026-01-16T19:06:01.167807" elapsed="1.115019"/>
+</kw>
+<status status="PASS" start="2026-01-16T19:06:00.977088" elapsed="1.305828"/>
 </kw>
 <kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-01-16T18:38:27.222945" level="INFO">Clicking element 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/label'.</msg>
-<msg time="2026-01-16T18:38:28.016665" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/label</msg>
+<msg time="2026-01-16T19:06:02.284910" level="INFO">Clicking element 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/label'.</msg>
+<msg time="2026-01-16T19:06:03.062033" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/label</msg>
 <arg>br.com.portoseguro.experienciacliente.mundoporto.hml:id/label</arg>
 <doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-16T18:38:27.221989" elapsed="0.794874"/>
+<status status="PASS" start="2026-01-16T19:06:02.283132" elapsed="0.779101"/>
 </kw>
-<kw name="Wait Until Page Contains" owner="AppiumLibrary">
-<msg time="2026-01-16T18:38:38.797713" level="INFO">&lt;?xml version='1.0' encoding='UTF-8' standalone='yes' ?&gt;
-&lt;hierarchy index="0" class="hierarchy" rotation="0" width="1080" height="2209"&gt;
-  &lt;android.widget.FrameLayout index="0" package="com.sec.android.app.launcher" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2340]" displayed="true"&gt;
-    &lt;android.view.View index="1" package="com.sec.android.app.launcher" class="android.view.View" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2340]" displayed="true" /&gt;
-    &lt;android.widget.LinearLayout index="2" package="com.sec.android.app.launcher" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2340]" displayed="true"&gt;
-      &lt;android.widget.FrameLayout index="0" package="com.sec.android.app.launcher" class="android.widget.FrameLayout" text="" resource-id="android:id/content" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2340]" displayed="true"&gt;
-        &lt;android.view.ViewGroup index="0" package="com.sec.android.app.launcher" class="android.view.ViewGroup" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2340]" displayed="true" /&gt;
-      &lt;/android.widget.FrameLayout&gt;
-    &lt;/android.widget.LinearLayout&gt;
-    &lt;android.widget.FrameLayout index="3" package="com.sec.android.app.launcher" class="android.widget.FrameLayout" text="" resource-id="com.sec.android.app.launcher:id/home_screen" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2340]" displayed="true"&gt;
-      &lt;android.widget.FrameLayout index="0" package="com.sec.android.app.launcher" class="android.widget.FrameLayout" text="" resource-id="com.sec.android.app.launcher:id/workspace_pot_view" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2340]" displayed="true"&gt;
-        &lt;android.view.ViewGroup index="0" package="com.sec.android.app.launcher" class="android.view.ViewGroup" text="" resource-id="com.sec.android.app.launcher:id/workspace_fast_recycler_view" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,0][1080,2034]" displayed="true"&gt;
-          &lt;android.widget.LinearLayout index="1" package="com.sec.android.app.launcher" class="android.widget.LinearLayout" text="" content-desc="Página 2 de 2" checkable="false" checked="false" clickable="true" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[38,0][1042,2000]" displayed="true"&gt;
-            &lt;android.widget.FrameLayout index="0" package="com.sec.android.app.launcher" class="android.widget.FrameLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[38,0][1042,147]" displayed="true" /&gt;
-            &lt;android.view.ViewGroup index="1" package="com.sec.android.app.launcher" class="android.view.ViewGroup" text="" resource-id="com.sec.android.app.launcher:id/wsCellLayout" checkable="false" checked="false" clickable="true" enabled="true" focusable="false" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[38,147][1042,1940]" displayed="true"&gt;
-              &lt;android.widget.TextView index="0" package="com.sec.android.app.launcher" class="android.widget.TextView" text="Authenticator" content-desc="Authenticator" resource-id="com.sec.android.app.launcher:id/icon" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[38,147][238,445]" displayed="true" /&gt;
-              &lt;android.widget.TextView index="1" package="com.sec.android.app.launcher" class="android.widget.TextView" text="Authenticator" content-desc="Authenticator" resource-id="com.sec.android.app.launcher:id/icon" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[238,147][438,445]" displayed="true" /&gt;
-              &lt;android.widget.TextView index="2" package="com.sec.android.app.launcher" class="android.widget.TextView" text="Flash" content-desc="Flash" resource-id="com.sec.android.app.launcher:id/icon" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[438,147][638,445]" displayed="true" /&gt;
-              &lt;android.widget.TextView index="3" package="com.sec.android.app.launcher" class="android.widget.TextView" text="Prime Video" content-desc="Prime Video" resource-id="com.sec.android.app.launcher:id/icon" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[638,147][838,445]" displayed="true" /&gt;
-              &lt;android.widget.TextView index="4" package="com.sec.android.app.launcher" class="android.widget.TextView" text="Samsung Itaú" content-desc="Samsung Itaú" resource-id="com.sec.android.app.launcher:id/icon" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[438,1339][638,1637]" displayed="true" /&gt;
-            &lt;/android.view.ViewGroup&gt;
-          &lt;/android.widget.LinearLayout&gt;
-        &lt;/android.view.ViewGroup&gt;
-        &lt;android.widget.FrameLayout index="1" package="com.sec.android.app.launcher" class="android.widget.FrameLayout" text="" resource-id="com.sec.android.app.launcher:id/workspace_page_indicator" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1940][1080,2034]" displayed="true"&gt;
-          &lt;android.widget.LinearLayout index="0" package="com.sec.android.app.launcher" class="android.widget.LinearLayout" text="" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,1940][1080,2034]" displayed="true"&gt;
-            &lt;android.widget.FrameLayout index="0" package="com.sec.android.app.launcher" class="android.widget.FrameLayout" text="" content-desc="Google Discover" checkable="false" checked="false" clickable="true" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[465,1962][515,2012]" displayed="true"&gt;
-              &lt;android.widget.ImageView index="0" package="com.sec.android.app.launcher" class="android.widget.ImageView" text="" resource-id="com.sec.android.app.launcher:id/icon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[465,1962][515,2012]" displayed="true" /&gt;
-            &lt;/android.widget.FrameLayout&gt;
-            &lt;android.widget.FrameLayout index="1" package="com.sec.android.app.launcher" class="android.widget.FrameLayout" text="" content-desc="Página 1 de 2 Não selecionado, Página padrão" checkable="false" checked="false" clickable="true" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[515,1962][565,2012]" displayed="true"&gt;
-              &lt;android.widget.ImageView index="0" package="com.sec.android.app.launcher" class="android.widget.ImageView" text="" resource-id="com.sec.android.app.launcher:id/icon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[515,1962][565,2012]" displayed="true" /&gt;
-            &lt;/android.widget.FrameLayout&gt;
-            &lt;android.widget.FrameLayout index="2" package="com.sec.android.app.launcher" class="android.widget.FrameLayout" text="" content-desc="Página 2 de 2 Selecionado" checkable="false" checked="false" clickable="true" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[565,1962][615,2012]" displayed="true"&gt;
-              &lt;android.widget.ImageView index="0" package="com.sec.android.app.launcher" class="android.widget.ImageView" text="" resource-id="com.sec.android.app.launcher:id/icon" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[565,1962][615,2012]" displayed="true" /&gt;
-            &lt;/android.widget.FrameLayout&gt;
-          &lt;/android.widget.LinearLayout&gt;
-        &lt;/android.widget.FrameLayout&gt;
-      &lt;/android.widget.FrameLayout&gt;
-      &lt;android.widget.LinearLayout index="1" package="com.sec.android.app.launcher" class="android.widget.LinearLayout" text="" resource-id="com.sec.android.app.launcher:id/hotseat_container" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[0,2034][1080,2340]" displayed="true"&gt;
-        &lt;android.view.ViewGroup index="0" package="com.sec.android.app.launcher" class="android.view.ViewGroup" text="" resource-id="com.sec.android.app.launcher:id/hotseat_layout" checkable="false" checked="false" clickable="false" enabled="true" focusable="false" focused="false" long-clickable="false" password="false" scrollable="false" selected="false" bounds="[38,2034][1040,2298]" displayed="true"&gt;
-          &lt;android.widget.TextView index="0" package="com.sec.android.app.launcher" class="android.widget.TextView" text="Telefone" content-desc="Telefone" resource-id="com.sec.android.app.launcher:id/icon" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[38,2034][372,2298]" displayed="true" /&gt;
-          &lt;android.widget.TextView index="1" package="com.sec.android.app.launcher" class="android.widget.TextView" text="Mensagens" content-desc="Mensagens" resource-id="com.sec.android.app.launcher:id/icon" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[372,2034][706,2298]" displayed="true" /&gt;
-          &lt;android.widget.TextView index="2" package="com.sec.android.app.launcher" class="android.widget.TextView" text="Câmera" content-desc="Câmera" resource-id="com.sec.android.app.launcher:id/icon" checkable="false" checked="false" clickable="true" enabled="true" focusable="true" focused="false" long-clickable="true" password="false" scrollable="false" selected="false" bounds="[706,2034][1040,2298]" displayed="true" /&gt;
-        &lt;/android.view.ViewGroup&gt;
-      &lt;/android.widget.LinearLayout&gt;
-    &lt;/android.widget.FrameLayout&gt;
-  &lt;/android.widget.FrameLayout&gt;
-&lt;/hierarchy&gt;</msg>
-<kw name="Capture Page Screenshot" owner="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<status status="FAIL" start="2026-01-16T18:38:38.798508" elapsed="0.531637">Execution terminated by signal</status>
+<status status="PASS" start="2026-01-16T19:05:53.634854" elapsed="9.427573"/>
 </kw>
-<msg time="2026-01-16T18:38:39.331247" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
-<msg time="2026-01-16T18:38:39.331691" level="FAIL">Text 'Continuar sem biometria' did not appear in 10 seconds</msg>
-<arg>text=Continuar sem biometria</arg>
-<arg>timeout=10</arg>
-<doc>Waits until the ``text`` appears on the current page.</doc>
-<status status="FAIL" start="2026-01-16T18:38:28.017310" elapsed="11.315921">Text 'Continuar sem biometria' did not appear in 10 seconds</status>
-</kw>
-<kw name="Click Text" owner="AppiumLibrary">
-<arg>Continuar sem biometria</arg>
-<doc>Clicks the text identified by ``text``.</doc>
-<status status="NOT RUN" start="2026-01-16T18:38:39.333449" elapsed="0.000025"/>
+<kw name="Avanço sem utilizar a biometria">
+<msg time="2026-01-16T19:06:03.065100" level="FAIL">No keyword with name 'Avanço sem utilizar a biometria' found.</msg>
+<status status="FAIL" start="2026-01-16T19:06:03.065016" elapsed="0.000179">No keyword with name 'Avanço sem utilizar a biometria' found.</status>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-16T18:38:39.333598" elapsed="0.000019"/>
+<status status="NOT RUN" start="2026-01-16T19:06:03.065513" elapsed="0.000037"/>
 </kw>
-<status status="FAIL" start="2026-01-16T18:38:08.515234" elapsed="30.818620">Text 'Continuar sem biometria' did not appear in 10 seconds</status>
+<status status="FAIL" start="2026-01-16T19:05:45.516245" elapsed="17.550375">No keyword with name 'Avanço sem utilizar a biometria' found.</status>
 </test>
-<status status="FAIL" start="2026-01-16T18:38:08.374931" elapsed="30.959350"/>
+<status status="FAIL" start="2026-01-16T19:05:45.374208" elapsed="17.693584"/>
 </suite>
 <statistics>
 <total>
@@ -194,6 +143,5 @@ with a specific endpoint. Check out the appium drivers for more details: https:/
 </suite>
 </statistics>
 <errors>
-<msg time="2026-01-16T18:38:39.331247" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
 </errors>
 </robot>
