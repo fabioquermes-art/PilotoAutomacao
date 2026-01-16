@@ -1,9 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.4.1 (Python 3.13.3 on darwin)" generated="2026-01-16T19:05:45.372683" rpa="false" schemaversion="5">
-<suite id="s1" name="testSuitability" source="/Users/frederico_cunha/Projetos/PilotoAutomacao/tests/testSuitability.robot">
-<test id="s1-t1" name="Cenario Acessar Deeplink Perfil Conservador" line="12">
+<robot generator="Robot 7.4.1 (Python 3.14.2 on darwin)" generated="2026-01-16T20:41:51.085550" rpa="false" schemaversion="5">
+<suite id="s1" name="testSuitability" source="/Users/fabio.quermes/Automacao/Automacao_Porto_Investimento/tests/testSuitability.robot">
+<test id="s1-t1" name="CT01 - Cenario Acessar Deeplink Perfil Conservador" line="13">
 <kw name="Abrir Aplicativo" owner="main">
 <kw name="Open Application" owner="AppiumLibrary">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2026-01-16T20:42:50.045726" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2026-01-16T20:42:50.045448" elapsed="0.007499">No application is open</status>
+</kw>
+<msg time="2026-01-16T20:42:50.054067" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-01-16T20:42:50.054361" level="FAIL">WebDriverException: Message: Error executing adbExec. Original error: 'Command '/Users/fabio.quermes/Library/Android/sdk/platform-tools/adb -P 5037 -s RXCY3074CAL shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 1'; Command output: adb: device 'RXCY3074CAL' not found
+
+Stacktrace:
+UnknownError: Error executing adbExec. Original error: 'Command '/Users/fabio.quermes/Library/Android/sdk/platform-tools/adb -P 5037 -s RXCY3074CAL shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 1'; Command output: adb: device 'RXCY3074CAL' not found
+
+    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/errors.ts:1103:34)
+    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/protocol.ts:507:57)
+The above error is caused by
+Error: Error executing adbExec. Original error: 'Command '/Users/fabio.quermes/Library/Android/sdk/platform-tools/adb -P 5037 -s RXCY3074CAL shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 1'; Command output: adb: device 'RXCY3074CAL' not found
+
+    at ChildProcess.&lt;anonymous&gt; (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/teen_process/lib/exec.ts:137:35)
+    at ChildProcess.emit (node:events:518:28)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Socket.&lt;anonymous&gt; (node:internal/child_process:456:11)
+    at Socket.emit (node:events:518:28)
+    at Pipe.&lt;anonymous&gt; (node:net:351:12)
+    at Pipe.callbackTrampoline (node:internal/async_hooks:130:17)</msg>
 <arg>http://localhost:4723</arg>
 <arg>platformName=Android</arg>
 <arg>deviceName=RXCY3074CAL</arg>
@@ -18,130 +41,290 @@ Please check https://appium.io/docs/en/2.19/guides/caps/
 | *Option*            | *Man.* | *Description*     |
 | remote_url          | Yes    | Appium server url |
 | alias               | No     | alias             |</doc>
-<status status="PASS" start="2026-01-16T19:05:45.516760" elapsed="7.626610"/>
+<status status="FAIL" start="2026-01-16T20:41:51.542347" elapsed="58.513513">WebDriverException: Message: Error executing adbExec. Original error: 'Command '/Users/fabio.quermes/Library/Android/sdk/platform-tools/adb -P 5037 -s RXCY3074CAL shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 1'; Command output: adb: device 'RXCY3074CAL' not found
+
+Stacktrace:
+UnknownError: Error executing adbExec. Original error: 'Command '/Users/fabio.quermes/Library/Android/sdk/platform-tools/adb -P 5037 -s RXCY3074CAL shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 1'; Command output: adb: device 'RXCY3074CAL' not found
+
+    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/errors.ts:1103:34)
+    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/protocol.ts:507:57)
+The above error is caused by
+Error: Error executing adbExec. Original error: 'Command '/Users/fabio.quermes/Library/Android/sdk/platform-tools/adb -P 5037 -s RXCY3074CAL shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 1'; Command output: adb: device 'RXCY3074CAL' not found
+
+    at ChildProcess.&lt;anonymous&gt; (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/teen_process/lib/exec.ts:137:35)
+    at ChildProcess.emit (node:events:518:28)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Socket.&lt;anonymous&gt; (node:internal/child_process:456:11)
+    at Socket.emit (node:events:518:28)
+    at Pipe.&lt;anonymous&gt; (node:net:351:12)
+    at Pipe.callbackTrampoline (node:internal/async_hooks:130:17)</status>
 </kw>
-<status status="PASS" start="2026-01-16T19:05:45.516501" elapsed="7.627226"/>
+<status status="FAIL" start="2026-01-16T20:41:51.541474" elapsed="58.514633">WebDriverException: Message: Error executing adbExec. Original error: 'Command '/Users/fabio.quermes/Library/Android/sdk/platform-tools/adb -P 5037 -s RXCY3074CAL shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 1'; Command output: adb: device 'RXCY3074CAL' not found
+
+Stacktrace:
+UnknownError: Error executing adbExec. Original error: 'Command '/Users/fabio.quermes/Library/Android/sdk/platform-tools/adb -P 5037 -s RXCY3074CAL shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 1'; Command output: adb: device 'RXCY3074CAL' not found
+
+    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/errors.ts:1103:34)
+    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/protocol.ts:507:57)
+The above error is caused by
+Error: Error executing adbExec. Original error: 'Command '/Users/fabio.quermes/Library/Android/sdk/platform-tools/adb -P 5037 -s RXCY3074CAL shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 1'; Command output: adb: device 'RXCY3074CAL' not found
+
+    at ChildProcess.&lt;anonymous&gt; (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/teen_process/lib/exec.ts:137:35)
+    at ChildProcess.emit (node:events:518:28)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Socket.&lt;anonymous&gt; (node:internal/child_process:456:11)
+    at Socket.emit (node:events:518:28)
+    at Pipe.&lt;anonymous&gt; (node:net:351:12)
+    at Pipe.callbackTrampoline (node:internal/async_hooks:130:17)</status>
 </kw>
 <kw name="Abrir Deeplink Perfil 'CONSERVATIVE'" owner="main" source_name="Abrir Deeplink Perfil '${profile}'">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-01-16T19:05:53.145601" level="INFO">${deeplink_url} = portosuperapp://porto/invest/suitability?profile=CONSERVATIVE</msg>
-<var>${deeplink_url}</var>
-<arg>portosuperapp://porto/invest/suitability?profile=${profile}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-01-16T19:05:53.145020" elapsed="0.000625"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2026-01-16T19:05:53.146077" level="INFO">${adb_command} = am start -W -a android.intent.action.VIEW -d "portosuperapp://porto/invest/suitability?profile=CONSERVATIVE" br.com.portoseguro.experienciacliente.mundoporto.hml</msg>
-<var>${adb_command}</var>
-<arg>am start -W -a android.intent.action.VIEW -d "${deeplink_url}" ${app_package}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2026-01-16T19:05:53.145785" elapsed="0.000319"/>
-</kw>
-<kw name="Execute Script" owner="AppiumLibrary">
-<msg time="2026-01-16T19:05:53.147312" level="INFO">Provided dictionary: {'command': 'am start -W -a android.intent.action.VIEW -d "portosuperapp://porto/invest/suitability?profile=CONSERVATIVE" br.com.portoseguro.experienciacliente.mundoporto.hml'}</msg>
-<arg>mobile: shell</arg>
-<arg>command=${adb_command}</arg>
-<doc>Executes a variety of native, mobile commands that aren't associated
-with a specific endpoint. Check out the appium drivers for more details: https://appium.io/docs/en/2.19/ecosystem/drivers/.</doc>
-<status status="PASS" start="2026-01-16T19:05:53.146206" elapsed="0.487749"/>
-</kw>
-<status status="PASS" start="2026-01-16T19:05:53.144425" elapsed="0.489841"/>
+<status status="NOT RUN" start="2026-01-16T20:42:50.056569" elapsed="0.000092"/>
 </kw>
 <kw name="Realizo Login com o usuário '91510934642' e a senha 'senha123'" owner="login" source_name="Realizo Login com o usuário '${username}' e a senha '${password}'">
-<kw name="Preencho o campo da tela de login com '${username}'" owner="login" source_name="Preencho o campo da tela de login com '${texto}'">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-01-16T19:05:56.272006" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
-<arg>${txt_box}</arg>
-<arg>5</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-16T19:05:53.636041" elapsed="2.636101"/>
+<status status="NOT RUN" start="2026-01-16T20:42:50.057090" elapsed="0.000045"/>
 </kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-01-16T19:05:56.273504" level="INFO">Clicking element 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text'.</msg>
-<msg time="2026-01-16T19:05:56.359452" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
-<arg>${txt_box}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-16T19:05:56.272374" elapsed="0.087192"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2026-01-16T19:05:56.360856" level="INFO">Typing text '91510934642' into text field 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text'</msg>
-<msg time="2026-01-16T19:05:58.051229" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
-<arg>${txt_box}</arg>
-<arg>${texto}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-16T19:05:56.359799" elapsed="1.691622"/>
-</kw>
-<status status="PASS" start="2026-01-16T19:05:53.635659" elapsed="4.415948"/>
-</kw>
-<kw name="Click Text" owner="AppiumLibrary">
-<msg time="2026-01-16T19:05:58.973521" level="INFO">xpath criteria: //*[contains(@text,"Continuar")]</msg>
-<arg>Continuar</arg>
-<doc>Clicks the text identified by ``text``.</doc>
-<status status="PASS" start="2026-01-16T19:05:58.051901" elapsed="0.921879"/>
+<kw name="Avanço sem utilizar a biometria" owner="login">
+<status status="NOT RUN" start="2026-01-16T20:42:50.057370" elapsed="0.000046"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2026-01-16T19:06:00.975721" level="INFO">Slept 2 seconds.</msg>
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-16T20:42:50.057582" elapsed="0.000024"/>
+</kw>
+<kw name="Wait Until Page Contains" owner="AppiumLibrary">
+<arg>Seu perfil é conservador</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the ``text`` appears on the current page.</doc>
+<status status="NOT RUN" start="2026-01-16T20:42:50.057750" elapsed="0.000022"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-16T20:42:50.057886" elapsed="0.000020"/>
+</kw>
+<status status="FAIL" start="2026-01-16T20:41:51.540479" elapsed="58.517645">WebDriverException: Message: Error executing adbExec. Original error: 'Command '/Users/fabio.quermes/Library/Android/sdk/platform-tools/adb -P 5037 -s RXCY3074CAL shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 1'; Command output: adb: device 'RXCY3074CAL' not found
+
+Stacktrace:
+UnknownError: Error executing adbExec. Original error: 'Command '/Users/fabio.quermes/Library/Android/sdk/platform-tools/adb -P 5037 -s RXCY3074CAL shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 1'; Command output: adb: device 'RXCY3074CAL' not found
+
+    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/errors.ts:1103:34)
+    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/protocol.ts:507:57)
+The above error is caused by
+Error: Error executing adbExec. Original error: 'Command '/Users/fabio.quermes/Library/Android/sdk/platform-tools/adb -P 5037 -s RXCY3074CAL shell 'settings delete global hidden_api_policy_pre_p_apps;settings delete global hidden_api_policy_p_apps;settings delete global hidden_api_policy'' exited with code 1'; Command output: adb: device 'RXCY3074CAL' not found
+
+    at ChildProcess.&lt;anonymous&gt; (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/teen_process/lib/exec.ts:137:35)
+    at ChildProcess.emit (node:events:518:28)
+    at maybeClose (node:internal/child_process:1101:16)
+    at Socket.&lt;anonymous&gt; (node:internal/child_process:456:11)
+    at Socket.emit (node:events:518:28)
+    at Pipe.&lt;anonymous&gt; (node:net:351:12)
+    at Pipe.callbackTrampoline (node:internal/async_hooks:130:17)</status>
+</test>
+<test id="s1-t2" name="CT02 - Cenario Acessar Deeplink Perfil Moderado" line="22">
+<kw name="Abrir Aplicativo" owner="main">
+<kw name="Open Application" owner="AppiumLibrary">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2026-01-16T20:43:10.167116" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2026-01-16T20:43:10.166881" elapsed="0.002118">No application is open</status>
+</kw>
+<msg time="2026-01-16T20:43:10.169877" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-01-16T20:43:10.170155" level="FAIL">WebDriverException: Message: Could not find a connected Android device in 20000ms
+Stacktrace:
+UnknownError: Could not find a connected Android device in 20000ms
+    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/errors.ts:1103:34)
+    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/protocol.ts:507:57)
+The above error is caused by
+Error: Could not find a connected Android device in 20000ms
+    at ADB.getDevicesWithRetry (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/lib/tools/system-calls.ts:330:13)
+    at AndroidUiautomator2Driver.getDeviceInfoFromCaps (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/lib/commands/device/common.ts:45:21)
+    at AndroidUiautomator2Driver.createSession (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/lib/driver.ts:367:30)
+    at AppiumDriver.createSession (/usr/local/lib/node_modules/appium/lib/appium.js:360:35)</msg>
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=RXCY3074CAL</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>appPackage=${app_package}</arg>
+<arg>appActivity=${app_activity}</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>allow-insecure= adb_shell</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="FAIL" start="2026-01-16T20:42:50.059309" elapsed="20.112265">WebDriverException: Message: Could not find a connected Android device in 20000ms
+Stacktrace:
+UnknownError: Could not find a connected Android device in 20000ms
+    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/errors.ts:1103:34)
+    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/protocol.ts:507:57)
+The above error is caused by
+Error: Could not find a connected Android device in 20000ms
+    at ADB.getDevicesWithRetry (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/lib/tools/system-calls.ts:330:13)
+    at AndroidUiautomator2Driver.getDeviceInfoFromCaps (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/lib/commands/device/common.ts:45:21)
+    at AndroidUiautomator2Driver.createSession (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/lib/driver.ts:367:30)
+    at AppiumDriver.createSession (/usr/local/lib/node_modules/appium/lib/appium.js:360:35)</status>
+</kw>
+<status status="FAIL" start="2026-01-16T20:42:50.058961" elapsed="20.112808">WebDriverException: Message: Could not find a connected Android device in 20000ms
+Stacktrace:
+UnknownError: Could not find a connected Android device in 20000ms
+    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/errors.ts:1103:34)
+    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/protocol.ts:507:57)
+The above error is caused by
+Error: Could not find a connected Android device in 20000ms
+    at ADB.getDevicesWithRetry (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/lib/tools/system-calls.ts:330:13)
+    at AndroidUiautomator2Driver.getDeviceInfoFromCaps (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/lib/commands/device/common.ts:45:21)
+    at AndroidUiautomator2Driver.createSession (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/lib/driver.ts:367:30)
+    at AppiumDriver.createSession (/usr/local/lib/node_modules/appium/lib/appium.js:360:35)</status>
+</kw>
+<kw name="Abrir Deeplink Perfil 'MODERATE'" owner="main" source_name="Abrir Deeplink Perfil '${profile}'">
+<status status="NOT RUN" start="2026-01-16T20:43:10.172048" elapsed="0.000036"/>
+</kw>
+<kw name="Realizo Login com o usuário '91510934642' e a senha 'senha123'" owner="login" source_name="Realizo Login com o usuário '${username}' e a senha '${password}'">
+<status status="NOT RUN" start="2026-01-16T20:43:10.172278" elapsed="0.000029"/>
+</kw>
+<kw name="Avanço sem utilizar a biometria" owner="login">
+<status status="NOT RUN" start="2026-01-16T20:43:10.172453" elapsed="0.000024"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2026-01-16T20:43:10.172600" elapsed="0.000022"/>
+</kw>
+<status status="FAIL" start="2026-01-16T20:42:50.058579" elapsed="20.114215">WebDriverException: Message: Could not find a connected Android device in 20000ms
+Stacktrace:
+UnknownError: Could not find a connected Android device in 20000ms
+    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/errors.ts:1103:34)
+    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/protocol.ts:507:57)
+The above error is caused by
+Error: Could not find a connected Android device in 20000ms
+    at ADB.getDevicesWithRetry (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/lib/tools/system-calls.ts:330:13)
+    at AndroidUiautomator2Driver.getDeviceInfoFromCaps (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/lib/commands/device/common.ts:45:21)
+    at AndroidUiautomator2Driver.createSession (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/lib/driver.ts:367:30)
+    at AppiumDriver.createSession (/usr/local/lib/node_modules/appium/lib/appium.js:360:35)</status>
+</test>
+<test id="s1-t3" name="CT03 - Cenario Acessar Deeplink Perfil Agressivo" line="29">
+<kw name="Abrir Aplicativo" owner="main">
+<kw name="Open Application" owner="AppiumLibrary">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2026-01-16T20:43:30.303768" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2026-01-16T20:43:30.303557" elapsed="0.001900">No application is open</status>
+</kw>
+<msg time="2026-01-16T20:43:30.306241" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-01-16T20:43:30.306592" level="FAIL">WebDriverException: Message: Could not find a connected Android device in 20000ms
+Stacktrace:
+UnknownError: Could not find a connected Android device in 20000ms
+    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/errors.ts:1103:34)
+    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/protocol.ts:507:57)
+The above error is caused by
+Error: Could not find a connected Android device in 20000ms
+    at ADB.getDevicesWithRetry (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/lib/tools/system-calls.ts:330:13)
+    at AndroidUiautomator2Driver.getDeviceInfoFromCaps (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/lib/commands/device/common.ts:45:21)
+    at AndroidUiautomator2Driver.createSession (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/lib/driver.ts:367:30)
+    at AppiumDriver.createSession (/usr/local/lib/node_modules/appium/lib/appium.js:360:35)</msg>
+<arg>http://localhost:4723</arg>
+<arg>platformName=Android</arg>
+<arg>deviceName=RXCY3074CAL</arg>
+<arg>automationName=UiAutomator2</arg>
+<arg>appPackage=${app_package}</arg>
+<arg>appActivity=${app_activity}</arg>
+<arg>autoGrantPermissions=true</arg>
+<arg>allow-insecure= adb_shell</arg>
+<doc>Opens a new application to the given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.19/guides/caps/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | No     | alias             |</doc>
+<status status="FAIL" start="2026-01-16T20:43:10.173711" elapsed="20.134486">WebDriverException: Message: Could not find a connected Android device in 20000ms
+Stacktrace:
+UnknownError: Could not find a connected Android device in 20000ms
+    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/errors.ts:1103:34)
+    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/protocol.ts:507:57)
+The above error is caused by
+Error: Could not find a connected Android device in 20000ms
+    at ADB.getDevicesWithRetry (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/lib/tools/system-calls.ts:330:13)
+    at AndroidUiautomator2Driver.getDeviceInfoFromCaps (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/lib/commands/device/common.ts:45:21)
+    at AndroidUiautomator2Driver.createSession (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/lib/driver.ts:367:30)
+    at AppiumDriver.createSession (/usr/local/lib/node_modules/appium/lib/appium.js:360:35)</status>
+</kw>
+<status status="FAIL" start="2026-01-16T20:43:10.173403" elapsed="20.135022">WebDriverException: Message: Could not find a connected Android device in 20000ms
+Stacktrace:
+UnknownError: Could not find a connected Android device in 20000ms
+    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/errors.ts:1103:34)
+    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/protocol.ts:507:57)
+The above error is caused by
+Error: Could not find a connected Android device in 20000ms
+    at ADB.getDevicesWithRetry (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/lib/tools/system-calls.ts:330:13)
+    at AndroidUiautomator2Driver.getDeviceInfoFromCaps (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/lib/commands/device/common.ts:45:21)
+    at AndroidUiautomator2Driver.createSession (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/lib/driver.ts:367:30)
+    at AppiumDriver.createSession (/usr/local/lib/node_modules/appium/lib/appium.js:360:35)</status>
+</kw>
+<kw name="Abrir Deeplink Perfil 'AGRESSIVE'" owner="main" source_name="Abrir Deeplink Perfil '${profile}'">
+<status status="NOT RUN" start="2026-01-16T20:43:30.308839" elapsed="0.000072"/>
+</kw>
+<kw name="Realizo Login com o usuário '91510934642' e a senha 'senha123'" owner="login" source_name="Realizo Login com o usuário '${username}' e a senha '${password}'">
+<status status="NOT RUN" start="2026-01-16T20:43:30.309403" elapsed="0.000089"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
 <arg>2</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2026-01-16T19:05:58.974218" elapsed="2.001860"/>
+<status status="NOT RUN" start="2026-01-16T20:43:30.309800" elapsed="0.000039"/>
 </kw>
-<kw name="Preencho o campo da tela de login com '${password}'" owner="login" source_name="Preencho o campo da tela de login com '${texto}'">
-<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
-<msg time="2026-01-16T19:06:01.054840" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
-<arg>${txt_box}</arg>
-<arg>5</arg>
-<doc>Waits until the element specified by the ``locator`` is visible.</doc>
-<status status="PASS" start="2026-01-16T19:06:00.978149" elapsed="0.076806"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-01-16T19:06:01.056173" level="INFO">Clicking element 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text'.</msg>
-<msg time="2026-01-16T19:06:01.167158" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
-<arg>${txt_box}</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-16T19:06:01.055167" elapsed="0.112226"/>
-</kw>
-<kw name="Input Text" owner="AppiumLibrary">
-<msg time="2026-01-16T19:06:01.169694" level="INFO">Typing text 'senha123' into text field 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text'</msg>
-<msg time="2026-01-16T19:06:02.282734" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/it_edit_text</msg>
-<arg>${txt_box}</arg>
-<arg>${texto}</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-16T19:06:01.167807" elapsed="1.115019"/>
-</kw>
-<status status="PASS" start="2026-01-16T19:06:00.977088" elapsed="1.305828"/>
-</kw>
-<kw name="Click Element" owner="AppiumLibrary">
-<msg time="2026-01-16T19:06:02.284910" level="INFO">Clicking element 'br.com.portoseguro.experienciacliente.mundoporto.hml:id/label'.</msg>
-<msg time="2026-01-16T19:06:03.062033" level="INFO">criteria is br.com.portoseguro.experienciacliente.mundoporto.hml:id/label</msg>
-<arg>br.com.portoseguro.experienciacliente.mundoporto.hml:id/label</arg>
-<doc>Clicks the element identified by ``locator``.</doc>
-<status status="PASS" start="2026-01-16T19:06:02.283132" elapsed="0.779101"/>
-</kw>
-<status status="PASS" start="2026-01-16T19:05:53.634854" elapsed="9.427573"/>
-</kw>
-<kw name="Avanço sem utilizar a biometria">
-<msg time="2026-01-16T19:06:03.065100" level="FAIL">No keyword with name 'Avanço sem utilizar a biometria' found.</msg>
-<status status="FAIL" start="2026-01-16T19:06:03.065016" elapsed="0.000179">No keyword with name 'Avanço sem utilizar a biometria' found.</status>
+<kw name="Avanço sem utilizar a biometria" owner="login">
+<status status="NOT RUN" start="2026-01-16T20:43:30.310179" elapsed="0.000052"/>
 </kw>
 <kw name="Sleep" owner="BuiltIn">
 <arg>5</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="NOT RUN" start="2026-01-16T19:06:03.065513" elapsed="0.000037"/>
+<status status="NOT RUN" start="2026-01-16T20:43:30.310421" elapsed="0.000027"/>
 </kw>
-<status status="FAIL" start="2026-01-16T19:05:45.516245" elapsed="17.550375">No keyword with name 'Avanço sem utilizar a biometria' found.</status>
+<status status="FAIL" start="2026-01-16T20:43:10.173100" elapsed="20.137569">WebDriverException: Message: Could not find a connected Android device in 20000ms
+Stacktrace:
+UnknownError: Could not find a connected Android device in 20000ms
+    at getResponseForW3CError (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/errors.ts:1103:34)
+    at asyncHandler (/usr/local/lib/node_modules/appium/node_modules/@appium/base-driver/lib/protocol/protocol.ts:507:57)
+The above error is caused by
+Error: Could not find a connected Android device in 20000ms
+    at ADB.getDevicesWithRetry (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-adb/lib/tools/system-calls.ts:330:13)
+    at AndroidUiautomator2Driver.getDeviceInfoFromCaps (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/node_modules/appium-android-driver/lib/commands/device/common.ts:45:21)
+    at AndroidUiautomator2Driver.createSession (/Users/fabio.quermes/.appium/node_modules/appium-uiautomator2-driver/lib/driver.ts:367:30)
+    at AppiumDriver.createSession (/usr/local/lib/node_modules/appium/lib/appium.js:360:35)</status>
 </test>
-<status status="FAIL" start="2026-01-16T19:05:45.374208" elapsed="17.693584"/>
+<status status="FAIL" start="2026-01-16T20:41:51.087307" elapsed="99.224149"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="0" fail="3" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="testSuitability" id="s1" pass="0" fail="1" skip="0">testSuitability</stat>
+<stat name="testSuitability" id="s1" pass="0" fail="3" skip="0">testSuitability</stat>
 </suite>
 </statistics>
 <errors>
+<msg time="2026-01-16T20:41:51.532928" level="ERROR">Error in file '/Users/fabio.quermes/Automacao/Automacao_Porto_Investimento/tests/testSuitability.robot' on line 3: Initializing library 'AppiumLibrary' with arguments [ screenshot_on_failure=True ] failed: ValueError: Invalid time string 'screenshot_on_failure=True'.
+Traceback (most recent call last):
+  File "/Users/fabio.quermes/Automacao/Automacao_Porto_Investimento/venv/lib/python3.14/site-packages/AppiumLibrary/__init__.py", line 105, in __init__
+    self.set_appium_timeout(timeout)
+    ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/fabio.quermes/Automacao/Automacao_Porto_Investimento/venv/lib/python3.14/site-packages/decorator.py", line 235, in fun
+    return caller(func, *(extras + args), **kw)
+  File "/Users/fabio.quermes/Automacao/Automacao_Porto_Investimento/venv/lib/python3.14/site-packages/AppiumLibrary/keywords/keywordgroup.py", line 20, in _run_on_failure_decorator
+    raise err
+  File "/Users/fabio.quermes/Automacao/Automacao_Porto_Investimento/venv/lib/python3.14/site-packages/AppiumLibrary/keywords/keywordgroup.py", line 15, in _run_on_failure_decorator
+    return method(*args, **kwargs)
+  File "/Users/fabio.quermes/Automacao/Automacao_Porto_Investimento/venv/lib/python3.14/site-packages/AppiumLibrary/keywords/_applicationmanagement.py", line 135, in set_appium_timeout
+    self._timeout_in_secs = robot.utils.timestr_to_secs(seconds)
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "/Users/fabio.quermes/Automacao/Automacao_Porto_Investimento/venv/lib/python3.14/site-packages/robot/utils/robottime.py", line 61, in timestr_to_secs
+    raise ValueError(f"Invalid time string '{timestr}'.")
+ValueError: Invalid time string 'screenshot_on_failure=True'.</msg>
+<msg time="2026-01-16T20:42:50.054067" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-01-16T20:43:10.169877" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2026-01-16T20:43:30.306241" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>
