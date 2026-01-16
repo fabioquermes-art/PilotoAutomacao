@@ -4,7 +4,7 @@
 Library    AppiumLibrary
 
 
-Resource    ../resources/mein.resource
+Resource    ../resources/main.resource
 
 
 *** Variables ***
